@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)https://cdpn.io/miktelon/fullpage/jOedYWK?editors=0010&nocache=true&view= -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+
+
+
+  
+  <title>CodePen - A Pen by mike</title>
+    <link rel="canonical" href="https://codepen.io/miktelon/pen/jOedYWK">
+  
+  
+  
+  
+<style>
+@import url('https://fonts.googleapis.com/css?family=Ravi+Prakash');
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
+$red: #D40034;
+$orange: #FF9B00;
+$yellow: #FFDF00;
+$green: #32FF5E;
+$blue: #82DFF5;
+$purple: #A200FF;
+
+$prideColors: $red, $orange, $yellow, $green, $blue, $purple;
+$prideColorsLength: length($prideColors);
+
+@keyframes rainbow {
+  @for $i from 1 through $prideColorsLength {
+    #{$i* 10%}  { background: nth($prideColors, $i)};
+  }
+}
+
+body {
+  background: #222;
+}
+.bigbutton {
+  font-size: 240px;
+}
+#cookie {
+  width: 480px;
+  height: 480px;
+  font-size: 90px;
+}
+.container {
+  display: flex;
+}
+
+.item {
+  width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+.item:nth-of-type(1) {
+  background: $red;
+  animation: rainbow 3s infinite;
+}
+
+.item:nth-of-type(2) {
+  background: $orange;
+  animation: rainbow 3s infinite;
+  animation-delay: 0.2s;
+}
+
+.item:nth-of-type(3) {
+  background: $yellow;
+  animation: rainbow 3s infinite;
+  animation-delay: 0.4s;
+}
+
+.item:nth-of-type(4) {
+  background: $green;
+  animation: rainbow 3s infinite;
+  animation-delay: 0.6s;
+}
+
+.item:nth-of-type(5) {
+  background: $blue;
+  animation: rainbow 3s infinite;
+  animation-delay: 0.8s;
+}
+
+.item:nth-of-type(6) {
+  background: $purple;
+  animation: rainbow 3s infinite;
+  animation-delay: 1s;
+}
+
+.item:nth-of-type(7) {
+  background: $red;
+  animation: rainbow 3s infinite;
+  animation-delay: 1.2s;
+}
+
+.item:nth-of-type(8) {
+  background: $orange;
+  animation: rainbow 3s infinite;
+  animation-delay: 1.4s;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 4em;
+  font-family: 'Oswald', sans-serif;
+  color: #fff;
+  text-shadow: 1px 1px 2px #222;
+}
+
+h1 {
+  margin-top: 15%;
+  line-height: 50px;
+  font-size: 50px;
+  font-family: 'Paytone One', sans-serif;
+  text-align: center;
+  background: linear-gradient(
+    to right, 
+    #ff1616, #ff7716, #ffdc16, #36c945, #10a5ce, #0f0096, #a51eff, #ff1616);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 800px;
+  background-position: center 0%;
+  animation: background-slide 25s infinite linear;
+}
+
+@keyframes background-slide {
+  100% {
+    background-position: -8160px;
+  }
+}
+button {
+	border-radius: 100%;
+	width: 150px;
+	height: 150px;
+	background-color: #f4e5b5;
+	border: solid #635425;
+	box-shadow: 0px 6px #77725e;
+	font-family: 'Gloria Hallelujah', cursive;
+	font-size: 18px;
+	color: #593210
+}
+h5 {
+  margin-top: 15%;
+  line-height: 10px;
+  font-size: 10px;
+  font-family: 'Paytone One', sans-serif;
+  text-align: center;
+  background: linear-gradient(
+    to right, 
+    #ff1616, #ff7716, #ffdc16, #36c945, #10a5ce, #0f0096, #a51eff, #ff1616);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 800px;
+  background-position: center 0%;
+  animation: background-slide 25s infinite linear;
+}
+
+@keyframes background-slide {
+  100% {
+    background-position: -8160px;
+  }
+}
+
+button:hover {
+	background-color: #c1b48b;
+}
+
+button:active {
+  background-color: #c1b48b;
+  box-shadow: 0px 2px #494537;
+  transform: translateY(4px);
+}
+
+button:focus {
+	outline:0;
+}
+
+body {
+  text-align: center;
+}
+
+@keyframes blinking {
+  0% { background: red; }
+  25% {background: orange;};
+  50% { background: yellow; }
+  75% {background: green;}
+  100% { background: blue; }
+}
+
+body {
+  background: red;
+  animation: blinking 5s 0s infinite alternate none;
+}
+img{
+  width:100px;
+  height:100px;
+  text-align: left;
+}
+h2{
+  text-size:200px;
+}
+div{
+  text-align:center;
+}
+.trainz{
+  text-align: center;
+  text-size: 80px;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+</head>
+
+<body translate="no">
+  <link href="./css" rel="stylesheet">
+<div class="container">
+<div class="item"><h2>COOKIE CLICKER</h2></div>
+</div><br><br>
+<div class="bigbutton"><button id="cookie" onclick="play()">Cookie Clicker</button></div>
+<hr width="15%" size="2" align="center" shade="black">
+<button id="stores" onclick="store()">Autoclicker Store</button>
+<button id="MNM STORE" onclick="MNMS()">MNMS 3000 cookies</button>
+<button id="OREO" onclick="OREO()">OREOS 30000 cookies</button>
+<hr width="45%" size="2" align="center" shade="black">
+<button id="newstore" onclick="newstore()">New Store? 5,000,000,000,000 cookies</button>
+<h1>HAPPY CLICKING!</h1>
+    <script src="./stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+
+  
+      <script id="rendered-js">
+var MNM = 0;
+
+var clickers = 0;
+
+var score;
+score = 15;
+
+var count;
+count = 0;
+
+var txt;
+
+var text;
+
+var texts;
+
+var texting;
+
+var num;
+num = 1;
+
+var numbers;
+numbers = 150;
+
+var trains;
+trains = 0;
+
+function play() {
+  count += num;
+  //alert("cookie")
+  cookie.innerHTML = "🍪 = #" + count;
+}
+function store() {
+  if (count <= score) {
+    alert("You can't afford that!");
+  }
+  if (count >= score) {
+    var store = confirm("Would you like to buy an autoclicker for " + score + " cookies");
+    if (store === true) {
+      count -= score;
+      clickers = clickers + 1;
+      txt = "You bought an autoclicker!";
+      score += 5;
+      alert(txt + "  Your next autoclicker will cost 5 more");
+      window.setInterval(play, 1);
+      trains += 1;
+      stores.innerHTML = "Autoclicker Store (" + clickers + " owned)";
+    }
+  } else
+  {
+    txt = "you didn't buy an autoclicker";
+    alert(txt);
+
+  }
+
+}
+
+function MNMS() {
+  if (count <= 2999) {
+    alert("You can't afford that!");
+  }
+  if (count >= 3000) {
+    var text = confirm("Would you like to buy MNM cookies for 3000 cookies?(It DOUBLES your cookies)");
+
+    if (text === true) {
+      text = "YOU BOUGHT MNM COOKIES! YOU ARE GOOD AT THIS!";
+      alert(text);
+      count -= 3000;
+      num *= 2;
+    }
+  }
+}
+function OREO() {
+  if (count <= score) {
+    alert("You can't afford that!");
+  }
+  if (count >= 30000) {
+    var texts = confirm("Would you like to buy the OREO badge for 30000 cookies?It multiplies  your cookies by TEN");
+    if (texts === true) {
+      texts = "YOU BOUGHT OREO COOKIES! THIS IS GETTING CRAZY!!";
+      alert(texts);
+      count -= 30000;
+      num *= 10;
+    }
+  }
+}
+//# sourceURL=pen.js
+    </script>
+
+  
+
+
+
+</body></html>
